@@ -1,0 +1,40 @@
+
+ <?php
+			// Connect to MySQL
+			$db = mysqli_connect( "localhost", "root"," ","arm_values")                      
+			or die( "Could not connect to database </body></html>" );
+
+echo "testt";
+
+            $db_select = mysql_select_db("databasename",$db);
+			if (!$db_select){
+				die("Could not connect to database");
+			}
+?>
+
+<!DOCTYPE html>
+<html>
+
+ <head>
+   <meta charset="UTF-8">
+ </head>
+
+<body>
+ <?php
+  $result = mysql_query("select * from slides",$db);
+  if(!$result){
+	 die("Could not connect to database");
+			}
+
+   while($row = mysql_fetch_array($result)){
+       echo $row[1]." ".$row[2]."<br />";
+   }
+
+?>
+</body>
+</html>
+
+<?php
+
+ mysqli_close($db);
+ ?>
