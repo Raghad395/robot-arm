@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Robot control panel</title>
+  
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 60%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: darkblue;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+</style>
+</head>
+  
+<body>
+
+
+ <div class="slidecontainer">
+   <span id="demo1"></span>:<b> محرك 1 </b>
+    <input type="range" min="0" max="180" value="0"   class="slider"    id="myRange1"> الزاوية
+ </div>
+ <br>
+  
+ <div class="slidecontainer">
+   <span id="demo2"></span>:<b> محرك 2 </b>
+    <input type="range" min="0" max="180" value="0"  class="slider"    id="myRange2"> الزاوية
+ </div>
+ <br>
+  
+ <div class="slidecontainer">
+   <span id="demo3"></span>:<b> محرك 3 </b>
+   <input type="range" min="0" max="180" value="0" class="slider"    id="myRange3"> الزاوية
+ </div>
+  <br>
+  
+  <div class="slidecontainer">
+    <span id="demo4"></span>:<b> محرك 4 </b>
+   <input type="range" min="0" max="180" value="0" class="slider"    id="myRange4"> الزاوية
+ </div>
+  <br>
+  
+  <div class="slidecontainer">
+    <span id="demo5"></span>:<b> محرك 5 </b>
+   <input type="range" min="0" max="180" value="0" class="slider"    id="myRange5"> الزاوية
+ </div>
+  <br>
+
+    <div class="slidecontainer">
+    <span id="demo6"></span>:<b>  محرك 6 </b>
+   <input type="range" min="0" max="180" value="0" class="slider"    id="myRange6"> الزاوية
+ </div>
+
+
+  <script>
+    
+    //slide1
+  var slider1 = document.getElementById("myRange1");
+  var output1 = document.getElementById("demo1");
+   output1.innerHTML = slider1.value;
+    
+     slider1.oninput = function() {
+     output1.innerHTML = this.value;}
+   
+    //slide2
+  var slider2 = document.getElementById("myRange2");
+  var output2 = document.getElementById("demo2");
+    output2.innerHTML = slider2.value;
+    
+     slider2.oninput = function() {
+     output2.innerHTML = this.value;}
+  
+    //slide3
+  var slider3 = document.getElementById("myRange3");
+  var output3 = document.getElementById("demo3");
+     output3.innerHTML = slider3.value;
+    
+     slider3.oninput = function() {
+     output3.innerHTML = this.value;}
+    
+   //slide4 
+  var slider4 = document.getElementById("myRange4");
+  var output4 = document.getElementById("demo4");
+     output4.innerHTML = slider4.value;
+    
+    slider4.oninput = function() {
+     output4.innerHTML = this.value;}
+    
+  
+    //slide5
+  var slider5 = document.getElementById("myRange5");
+  var output5 = document.getElementById("demo5");
+     output5.innerHTML = slider5.value;
+    
+    slider5.oninput = function() {
+     output5.innerHTML = this.value;}
+    
+        //slide6
+  var slider6 = document.getElementById("myRange6");
+  var output6= document.getElementById("demo6");
+     output5.innerHTML = slider6.value;
+    
+    slider6.oninput = function() {
+     output6.innerHTML = this.value;}
+  
+
+</script>
+  <br>
+      <br>
+           <input type="button" value="  تشغيل ">
+	          <input type="button" value="  حفظ  ">
+	
+
+</body>
+</html>
